@@ -1,13 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Тест для GitHub</title>
+    <style>
+        .container {
+            display: flex;
+            margin: 0 auto;
+            max-width: 500px;
+            flex-direction: column;
+            align-items: center;
+        }
+        .wrapper {
+            display: flex;
+        }
+        .block-div {
+            width: 10%;
+            min-width: 150px;
+            height: 10px;
+            text-align: center;
+            margin: 10px;
+            padding: 65px 0;
+            background-color: rgb(174, 9, 234);
+        }
+        .butt {
+            margin-right: 25px; 
+            padding: 10px;
+            color: rgb(255, 255, 255);
+            background-color: #3a32ac;
+        }
+    </style>
 </head>
 <body>
-    <h1>Test</h1>
-    <h3>Hello World</h3>
+    <center>
+        <h2>Сайт створено виключно для ПР№18-6</h2>
+        <h3><p>Керування фоном, шрифтом та текстом</p></h3>
+        <input class = "butt" type="button" value="Чорний фон сайту" onclick="BackgroundColor('black')">
+        <input class = "butt" type="button" value="Білий фон сайту" onclick="BackgroundColor('white')">
+        <input class = "butt" type="button" value="Чорний колір тексту" onclick="FontColor('black')">
+        <input class = "butt" type="button" value="Білий колір тексту" onclick="FontColor('white')">
+        <input class = "butt" type="button" value="Зміна шрифта" onclick="ChangeFont()">   
+        <h1>Космічний простір</h1>
+        <h4>Додавання блоків</h4>
+        <div class="container">
+            <div class = "wrapper" id = "blocks">
+                <div class = "block-div">1</div>
+            </div>
+        </div>
+        <br>
+        <input class = "butt" type="button" value="Додати блок перед" onclick="AddBlockFirst()">
+        <input class = "butt" type="button" value="Додати блок після" onclick="AddBlockEnd()"><br>
+        <h2>Історія космосу</h2>
+    </center>
+    <img src="cosmos1.jpeg" width = "320" height="240" align = "left" hspace = "10px">
+    <img src="cosmos3.jpg" width = "320" height="240" align = "right" hspace = "10px">
+    <p align = "justify">
+        Космі́чний про́стір, або ко́смос (дав.-гр. κόσμος − всесвіт), — відносно порожні ділянки Всесвіту, 
+        розташовані поза межами атмосфер небесних тіл. 
+        Всупереч розповсюдженій думці, космос не повністю порожній, але у ньому дуже низька густина речовини. 
+        Переважно це водень в атомарному, молекулярному чи іонізованому стані, також є інші прості гази (гелій, азот, кисень), 
+        тверді частинки пилу, що містять переважно вуглець, а за допомогою мікрохвильової спектроскопії 
+        виявлено кілька десятків різних молекул.
+    </p>
+    <p align = "justify">
+        Отож — космічний простір або просто простір це обшир, який існує поза Землею і між небесними тілами. 
+        Як зазначено у передмові, космічний простір не зовсім порожній, отже це жорсткий вакуум, що містить низьку щільність частинок, 
+        переважно плазму водню та гелію, а також електромагнітне випромінення, магнітні поля, нейтрино, пил та космічні промені. 
+        Базова температура космосу, яка визначається фоновим випроміненням Великого вибуху, становить 2,7 кельвінів 
+        (−270,45 ° C; −454,81 ° F). Плазма між галактиками складає близько половини баріонної (звичайної) речовини у Всесвіті; 
+        вона має густину менше одного атома водню на кубічний метр і температуру мільйони кельвінів. Місцеві скопища речовини, 
+        скупчуються у зірки та галактики. Дослідження показують, що 90 % маси більшості галактик перебуває у невідомій формі, 
+        котра називається темною речовиною, яка взаємодіє з іншою речовиною.
+    </p>
+    <img src="cosmos2.jpg" width = "320" height="240" align = "left" hspace = "10px">
+    <img src="cosmos4.jpeg" width = "320" height="240" align = "right" hspace = "10px">
+    <p align = "justify">
+        Межі міжнародного космічного права були встановлені Договором про космос, який набув чинності 10 жовтня 1967 року. 
+        Цей договір запобігає будь-яким посяганням стосовно національного суверенітету і дозволяє всім державам вільно досліджувати космос. 
+        Попри розробку резолюцій ООН щодо мирного використання космічного простору, 
+        на земній орбіті вже було випробувано протисупутникову зброю.
+        Фізичні дослідження космосу люди розпочали у 20 столітті з появою висотних польотів на повітряній кулі. 
+        За цим пішли пілотовані ракетні польоти. Через високу вартість потрапляння в космос, 
+        пілотований космічний політ був обмежений низькою орбітою Землі та Місяцем. 
+        Натомість, безпілотні космічні апарати досягли усіх відомих планет Сонячної системи.
+    </p>
+    <p align="center">
+        <img src="cosmos5.jpg" width = "820" height="95" align = "center">
+        <h2><center>Виконала студентка групи ПСК-19 Івахіна Альона</center></h2> 
+    </p>
+    <script type="text/javascript">
+        let kil = 2;
+        const BackgroundColor = (color) => {
+            let body = document.querySelector('body')
+            body.style.backgroundColor = color
+        }
+        const FontColor = (color) => {
+            let body = document.querySelector('body')
+            body.style.color = color;
+        }
+        let block = document.getElementById('blocks')
+        const AddBlockEnd = () => {
+            let div_end = document.createElement('div')
+            div_end.appendChild(document.createTextNode(kil++))
+            div_end.classList.add('block-div')
+            block.appendChild(div_end)
+        }
+        const AddBlockFirst = () => {
+            let first_el = block.firstChild;
+            let div_start = document.createElement('div')
+            div_start.appendChild(document.createTextNode(kil++))
+            div_start.classList.add('block-div')
+            block.insertBefore(div_start, first_el)
+        }
+        const ChangeFont = () => {
+            let fonts = '';
+            fonts = prompt('Оберіть шрифт який вам потрібен', 'Calibri')
+            document.body.style.fontFamily = fonts
+        }
+    </script> 
 </body>
 </html>
